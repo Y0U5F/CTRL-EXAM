@@ -1,4 +1,4 @@
-# CRTL-TEST
+# CRTL+TEST
 # Comprehensive Workflow for Examination System Database Project
 
 This document outlines a detailed workflow for developing the Examination System Database project using SQL Server, as specified in the provided requirements. The workflow incorporates Trello for project management and GitHub for version control, ensuring a structured, collaborative, and professional approach akin to a company project. Below, each phase is detailed with tasks, tools usage, and deliverables to ensure success.
