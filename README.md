@@ -7,30 +7,67 @@ This repository contains the complete database project for the ITI Examination S
 
 The project is organized into a clean, modular structure to separate documentation from the SQL source code. The SQL scripts are numbered to indicate the correct execution order.
 
-DataBaseProject/
-|
-├── 📁 docs/
-|   ├── 📁 ERD/
-|       └── 🖼️ ERD.drawio.jpg
-
-|   ├── 📁 Mapping/
-|       └── 📄 Mapping.pdf
-|
-|   └── 📁 Documentation/
-|       └── 📄 Documentation.pdf
-|
-├── 📁 SQL scripts/
-|   ├── 📜 1_DDL.sql
-|   ├── 📜 2_DML1.sql
-|   ├── 📜 3_Functions.sql
-|   ├── 📜 4_Views&spinstructor.sql
-|   ├── 📜 4_Views&spmanager.sql
-|   ├── 📜 4_Views&spstudent.sql
-|   ├── 📜 5_Triggers.sql
-|   ├── 📜 6_Security.sql
-|   └── 📜 7_Scenario.sql
-|
-└── 📖 README.md
+```text
+CRTL-TEST/
+├── 🖼️ CTRL_EXAM.png
+├── 📄 LICENSE
+├── 📖 README.md
+│
+├── 📁 ExaminationSystem-Database/
+│   ├── 📁 backup/
+│   │   ├── ExaminationSystem.bak
+│   │   └── .gitkeep
+│   │
+│   ├── 📁 Docs/
+│   │   ├── 📁 Documentation/
+│   │   │   └── 📄 Documentation.pdf
+│   │   ├── 📁 ERD/
+│   │   │   └── 🖼️ ERD.drawio.png
+│   │   └── 📁 Mapping/
+│   │       └── 📄 Mapping.pdf
+│   │
+│   ├── 📁 Project scripts/
+│   │   ├── 📁 Backup script/
+│   │   │   ├── .suo
+│   │   │   ├── DocumentLayout.backup.json
+│   │   │   └── DocumentLayout.json
+│   │   │
+│   │   ├── 📁 SQL scripts/
+│   │   │   ├── DataBaseProject.ssmssqlproj
+│   │   │   ├── 📜 DDL.sql
+│   │   │   ├── 📜 DML1.sql
+│   │   │   ├── 📜 Functions.sql
+│   │   │   ├── 📜 Scenario.sql
+│   │   │   ├── 📜 TestBackup.sql
+│   │   │   ├── 📜 Trig.sql
+│   │   │   ├── 📜 Users Auth Autho.sql
+│   │   │   ├── 📜 views&spInstructor.sql
+│   │   │   ├── 📜 views&spManger.sql
+│   │   │   └── 📜 views&spStudent.sql
+│   │   │
+│   │   └── 📄 DataBaseProject.sln
+│   │
+│   ├── 📁 Users for roles/
+│   │   └── 📄 Users.txt
+│   │
+│   └── .gitkeep
+│
+└── 📁 ExaminationSystem-Docker/
+    ├── 📁 db-setup/
+    │   ├── 📜 1_DDL.sql
+    │   ├── 📜 2_DML1.sql
+    │   ├── 📜 3_Functions.sql
+    │   ├── 📜 4_views_spStudent.sql
+    │   ├── 📜 5_views_spInstructor.sql.sql
+    │   ├── 📜 6_views_spManger.sql.sql
+    │   ├── 📜 7_Users_Auth_Autho.sql.sql
+    │   ├── 📜 8_Trig.sql.sql
+    │   └── 📜 entrypoint.sh
+    │
+    ├── 🐳 docker-compose.yml
+    ├── 🐳 Dockerfile
+    ├── .gitattributes
+    └── .gitkeep
 
 
 ## ✨ Key Features
