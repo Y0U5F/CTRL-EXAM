@@ -91,7 +91,7 @@ This script establishes the security framework. It creates the database roles, g
 ## 🎨 Database Schema (ERD)
 
 The database is designed with normalization principles to ensure data integrity and minimize redundancy.
-<img width="7351" height="6510" alt="ERD drawio" src="https://github.com/user-attachments/assets/1e6ab5fa-9d21-42b7-bcae-88e485649b62" />
+![Entity Relationship Diagram](ExaminationSystem-Database/Docs/ERD/ERD.drawio.png)
 
 
 ---
