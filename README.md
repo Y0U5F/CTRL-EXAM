@@ -9,10 +9,6 @@ This repository contains the complete database project for the ITI Examination S
 
 The project is organized into two main modules: `ExaminationSystem-Database` for the core database scripts and documentation, and `ExaminationSystem-Docker` for containerization.
 
-## 📂 Project Structure
-
-The project is organized into a clean, modular structure to separate documentation from the SQL source code. The SQL scripts are numbered to indicate the correct execution order.
-
 ```text
 CRTL-TEST/
 ├── 📁 ExaminationSystem-Database/
