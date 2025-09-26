@@ -1,5 +1,10 @@
 # CTRL + EXAM
-![CTRL+EXAM Logo](CTRL_EXAM.png)
+<h1 align="center">
+  <img src="CTRL_EXAM.png" alt="CTRL+EXAM Logo" width="180"/>
+  <br/>
+  CTRL+EXAM
+</h1>
+
 # ITI Examination System Database
 
 This repository contains the complete database project for the ITI Examination System, a comprehensive solution designed to manage and automate the examination process for the Information Technology Institute (ITI). This project was developed as part of the Data Engineer track curriculum.
