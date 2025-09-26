@@ -1,0 +1,9 @@
+services:
+  db:
+    build: .
+    container_name: itidb_exam_system
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=StrongPass123!
+    ports:
+      - "1433:1433"

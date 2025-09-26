@@ -1,0 +1,26 @@
+           {_INSTRUCTORS_}
+
+     @AppUsername   = 'inst_rahma',
+     @LoginPassword = 'inst456';
+__________________________________________________
+           {_STUDENTS_}
+
+  1_   @AppUsername   = 'stud_ahmed',
+       @LoginPassword = 'stud123';
+
+  2_   @AppUsername   = 'stud_omar',
+       @LoginPassword = 'stud108';
+__________________________________________________
+           {_MANAGER_}
+
+     @AppUsername   = 'tm_mohammed',
+     @LoginPassword = 'tm456';
+
+__________________________________________________
+            {_ADMIN_}
+
+      @AppUsername   = 'admin',
+      @LoginPassword = 'admin123';
+__________________________________________________
+    
+
