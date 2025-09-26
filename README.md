@@ -1,4 +1,3 @@
-# CTRL + EXAM
 <h1 align="center">
   <img src="CTRL_EXAM.png" alt="CTRL+EXAM Logo" width="180"/>
   <br/>
