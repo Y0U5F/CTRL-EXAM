@@ -91,7 +91,8 @@ CRTL-TEST/
 
 The database is designed with normalization principles to ensure data integrity and minimize redundancy.
 
-![Entity Relationship Diagram](Docs/ERD/ERD.drawio.jpg)
+![<img width="7351" height="6510" alt="ERD drawio" src="https://github.com/user-attachments/assets/44b00209-44a7-4b22-97d6-30ae4e377d72" />
+](Docs/ERD/ERD.drawio.jpg)
 
 ## 🔧 Setup & Usage
 
