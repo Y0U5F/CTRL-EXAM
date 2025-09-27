@@ -193,9 +193,9 @@ A daily full backup job can be configured using **SQL Server Agent**. A backup f
 
 ## 👥 Team Members
 
-* Asmaa Gamal Abdalaal Sayed
-* Ahmed Magdi Ali Baraka
-* Esraa Ramadan Sayed Darder
-* Bishoy Samir Najeeb Tawdros
-* Yousef Mohamed Soliman Abo-eleneen
-* Moaaz Omar Abdelfattah Abdelhamede: 8]
+* Asmaa Gamal [![LinkedIn](https://cdn-icons-png.flaticon.com/24/174/174857.png)](https://www.linkedin.com/in/asmaa-gamal-a393232a5/)
+* Yousef Mahmoud [![LinkedIn](https://cdn-icons-png.flaticon.com/24/174/174857.png)](https://www.linkedin.com/in/y0usefma7m0ud)
+* Ahmed Magdi [![LinkedIn](https://cdn-icons-png.flaticon.com/24/174/174857.png)](https://www.linkedin.com/in/ahmed-magdi41/)
+* Esraa Ramadan [![LinkedIn](https://cdn-icons-png.flaticon.com/24/174/174857.png)](https://www.linkedin.com/in/esraa-haroon-6a968a1a1/)
+* Bishoy Samir [![LinkedIn](https://cdn-icons-png.flaticon.com/24/174/174857.png)](https://www.linkedin.com/in/bishoy-samir-bba2ab216/)
+* Moaaz Omar [![LinkedIn](https://cdn-icons-png.flaticon.com/24/174/174857.png)](https://www.linkedin.com/in/moaaz-omar-303339216/) 
