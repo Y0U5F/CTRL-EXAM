@@ -21,19 +21,28 @@ CRTL-TEST/
 │   │   └── 📦 ExaminationSystem.bak
 │   │
 │   ├── 📁 Docs/
-│   │   ├── 📄 Documentation.pdf
-│   │   ├── 🖼️ ERD.drawio.png
-│   │   └── 📄 Mapping.pdf
+│   │   ├── 📁 Documentation/
+│   │   │   └── 📄 Documentation.pdf
+│   │   ├── 📁 ERD/
+│   │   │   └── 🖼️ ERD.drawio.png
+│   │   ├── 📁 Mapping/
+│   │   │   └── 📄 Mapping.pdf
 │   │
 │   ├── 📁 Project scripts/
 │   │   ├── 📁 SQL scripts/
 │   │   │   ├── 📜 DDL.sql
 │   │   │   ├── 📜 DML1.sql
 │   │   │   ├── 📜 Functions.sql
-│   │   │   ├── 📜 Views_and_SPs.sql  (Combined)
+│   │   │   ├── 📜 Scenario.sql
+│   │   │   ├── 📜 TestBackup.sql
 │   │   │   ├── 📜 Trig.sql
 │   │   │   ├── 📜 Users Auth Autho.sql
-│   │   │   └── 📜 Scenario.sql
+│   │   │   ├── 📜 views&spInstructor.sql
+│   │   │   ├── 📜 views&spManger.sql
+│   │   │   └── 📜 views&spStudent.sql
+│   │   ├── 📁 Backup script/
+│   │   │   ├── 📄 DocumentLayout.backup.json
+│   │   │   └── 📄 DocumentLayout.json
 │   │   └── 📄 DataBaseProject.sln
 │   │
 │   └── 📁 Users for roles/
@@ -41,8 +50,7 @@ CRTL-TEST/
 │
 └── 📁 ExaminationSystem-Docker/
     ├── 📁 db-setup/
-    │   ├── (Numbered SQL scripts for Docker setup)
-    │   └── 📜 entrypoint.sh
+    │   └── (Numbered SQL scripts for Docker setup)
     │
     ├── 🐳 docker-compose.yml
     └── 🐳 Dockerfile
@@ -65,23 +73,23 @@ CRTL-TEST/
 
 This section explains the role of each major SQL script located in the `ExaminationSystem-Database/Project scripts/SQL scripts/` directory.
 
-### DDL.sql (Data Definition Language)
-This script is the blueprint of the database. It builds the entire structure, creating all tables (like `Users`, `Students`, `Exams`, `Questions`) and defining the relationships between them using primary and foreign keys.
+1. ### DDL.sql (Data Definition Language)
+   This script is the blueprint of the database. It builds the entire structure, creating all tables (like `Users`, `Students`, `Exams`, `Questions`) and defining the relationships between them using primary and foreign keys.
 
-### DML1.sql (Data Manipulation Language)
-This script populates the database with initial "seed" data. It adds sample students, instructors, courses, and questions, making the system ready for immediate testing and demonstration.
+2. ### DML1.sql (Data Manipulation Language)
+   This script populates the database with initial "seed" data. It adds sample students, instructors, courses, and questions, making the system ready for immediate testing and demonstration.
 
-### Functions.sql
-This script creates all user-defined functions used for calculations and checks. Key functions include `FN_CalculateExamResult` to get a student's total score and `FN_CheckTextAnswer` to validate text-based answers.
+3. ### Functions.sql
+   This script creates all user-defined functions used for calculations and checks. Key functions include `FN_CalculateExamResult` to get a student's total score and `FN_CheckTextAnswer` to validate text-based answers.
 
-### Views_and_SPs.sql (Views and Stored Procedures)
-This is the core of the system's business logic. It contains all views (e.g., `v_Student_Exams`) that provide secure, role-specific data access, and all stored procedures (e.g., `sp_Instructor_AddExam`) that handle operations like creating exams or submitting answers.
+4. ### Views_and_SPs.sql (Views and Stored Procedures)
+   This is the core of the system's business logic. It contains all views (e.g., `v_Student_Exams`) that provide secure, role-specific data access, and all stored procedures (e.g., `sp_Instructor_AddExam`) that handle operations like creating exams or submitting answers.
 
-### Trig.sql (Triggers)
-This script sets up automated actions. For example, `trg_Students_Audit` logs all changes to student data for security, and `TRG_Exams_AutoEndTime` automatically calculates an exam's end time, ensuring data integrity.
+5. ### Trig.sql (Triggers)
+   This script sets up automated actions. For example, `trg_Students_Audit` logs all changes to student data for security, and `TRG_Exams_AutoEndTime` automatically calculates an exam's end time, ensuring data integrity.
 
-### Users Auth Autho.sql (Security)
-This script establishes the security framework. It creates the database roles, grants them specific permissions on views and procedures, and contains the master procedure `sec.ProvisionAppUserLogin` for creating user logins securely.
+6. ### Users Auth Autho.sql (Security)
+   This script establishes the security framework. It creates the database roles, grants them specific permissions on views and procedures, and contains the master procedure `sec.ProvisionAppUserLogin` for creating user logins securely.
 
 ---
 
