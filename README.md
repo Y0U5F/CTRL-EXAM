@@ -109,34 +109,80 @@ The database is designed with normalization principles to ensure data integrity 
 
 ---
 
+---
+
 ## 🔧 Setup & Usage
 
-To get the database up and running, execute the SQL scripts in the specified order to ensure dependencies are handled correctly.
+You can set up and run this project in two ways. The automated Docker method is highly recommended for its simplicity and reliability.
 
-1.  **Clone the Repository**:
-    ```bash
-    git clone [https://github.com/Y0U5F/CRTL-EXAM.git](https://github.com/Y0U5F/CRTL-EXAM.git)
+### Option A: Automated Setup via Docker (Recommended)
+
+This is the fastest way to get the database running. It creates an isolated container with a fully configured SQL Server instance and automatically sets up the database, tables, and data.
+
+**How it Works**
+The `docker-compose.yml` file orchestrates the entire process. It builds a custom image from the `Dockerfile`, which copies all the necessary SQL scripts inside. When the container starts for the first time, the SQL Server engine automatically executes these scripts in alphabetical order to build and populate the database. Data is safely stored outside the container using a Docker Volume to ensure persistence.
+
+**Prerequisites:**
+* Docker Desktop installed and running on your machine.
+
+**Steps:**
+
+1.  **Navigate to the Docker Directory**:
+    Open a terminal and navigate to the `ExaminationSystem-Docker` folder, where the `docker-compose.yml` file is located.
+
+2.  **Create the Environment File**:
+    This file securely stores the database password. Create a new file named `.env` in the same directory and add the following line (you can change the password):
+    ```
+    MSSQL_SA_PASSWORD=YourStrongPass_123!
     ```
 
+3.  **Build and Run the Container**:
+    Execute the following command. This will build the image, create the container, and run it in the background (`-d`).
+    ```bash
+    docker-compose up -d --build
+    ```
+
+4.  **Verify the Status**:
+    Wait for a minute or two for the database to initialize, then check the container's status:
+    ```bash
+    docker-compose ps
+    ```
+    The expected status is `Up (healthy)`, which confirms the database is ready.
+
+5.  **Connect to the Database**:
+    You can now connect using any database tool (like SSMS) with these credentials:
+    * **Server**: `localhost`
+    * **Login**: `sa`
+    * **Password**: The password you set in your `.env` file.
+
+---
+
+### Option B: Manual Setup via SQL Scripts
+
+This method is for users who have SQL Server installed locally and prefer to set up the database manually.
+
+**Execution Order is Crucial**
+You must run the scripts in the specified sequence because they depend on each other. For example, you cannot insert data (DML) into tables that have not yet been created (DDL).
+
+**Steps:**
+
+1.  **Clone the Repository** to get all the script files on your local machine.
+
 2.  **Execute Scripts in Order**:
-    In SQL Server Management Studio (SSMS), open and run the files from the `ExaminationSystem-Database/Project scripts/SQL scripts/` directory one by one in the following sequence:
-    1.  `DDL.sql`
-    2.  `DML1.sql`
-    3.  `Functions.sql`
-    4.  `views&spInstructor.sql`, `views&spManger.sql`, `views&spStudent.sql` (or a combined file)
-    5.  `Trig.sql`
-    6.  `Users Auth Autho.sql`
+    In SQL Server Management Studio (SSMS), open and run the files from the `ExaminationSystem-Database/Project scripts/SQL scripts/` directory in the following sequence:
+    1.  `DDL.sql` - Builds the database structure (tables, columns, relationships).
+    2.  `DML1.sql` - Inserts the initial seed data into the tables.
+    3.  `Functions.sql` - Creates all user-defined functions.
+    4.  `views&sp...` files - Creates the views and stored procedures.
+    5.  `Trig.sql` - Creates the database triggers.
+    6.  `Users Auth Autho.sql` - Sets up security roles and permissions.
 
 3.  **Create User Logins**:
-    After setting up the database, create the necessary SQL Server Logins for the sample users using the `sec.ProvisionAppUserLogin` stored procedure.
+    The database `USERS` exist, but they need server `LOGINS` to connect. Run the following stored procedure to create the logins and link them to the database users.
     ```sql
     EXEC sec.ProvisionAppUserLogin @AppUsername = 'stud_ahmed', @LoginPassword = 'stud123';
     EXEC sec.ProvisionAppUserLogin @AppUsername = 'inst_rahma', @LoginPassword = 'inst456';
     ```
-
-4.  **Run Demonstration Scenarios (Optional)**:
-    Execute `Scenario.sql` to see a demonstration of how different roles interact with the system.
-
 ---
 
 ## 🛡️ Backup Strategy
