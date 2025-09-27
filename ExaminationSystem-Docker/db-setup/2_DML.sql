@@ -73,11 +73,11 @@ GO
 -- Insert Branches
 INSERT INTO dbo.Branches (BranchName, [Description], BranchEmail, BranchPhone, TrainingManagerID)
 VALUES 
-    ('Smart Village Branch', 'Main campus in Smart Village, Bldg B148 on Cairo–Alex Desert Road', 'smartvillage@company.com', '0226594100', 1),
+    ('Smart Village Branch', 'Main campus in Smart Village, Bldg B148 on Cairoï¿½Alex Desert Road', 'smartvillage@company.com', '0226594100', 1),
     ('Alexandria Branch', 'Located at Post Office Building, Shohada Square (MISR Station) in Alexandria', 'alexandria@company.com', '0334567890', 2),
     ('New Capital Branch', 'Knowledge City (smart section)', 'newcapital@company.com', '01500123456', 1),
-    ('Assiut Branch', 'Assiut University – Info Network Building', 'assiut@company.com', '0882345678', 3),
-    ('Minia Branch', 'Minia University – Creativa Building', 'minia@company.com', '0862456789', 2);
+    ('Assiut Branch', 'Assiut University ï¿½ Info Network Building', 'assiut@company.com', '0882345678', 3),
+    ('Minia Branch', 'Minia University ï¿½ Creativa Building', 'minia@company.com', '0862456789', 2);
 GO
 
 -- Insert BranchIntakeTrack

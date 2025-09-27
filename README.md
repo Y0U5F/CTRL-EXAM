@@ -53,7 +53,7 @@ DataBaseProject/
 
 The database is designed with normalization principles to ensure data integrity and minimize redundancy.
 
-![Entity Relationship Diagram](Docs/ERD/ERD.drawio.jpg)
+![Entity Relationship Diagram](ExaminationSystem-Database/Docs/ERD/ERD.drawio.jpg)
 
 ## 🔧 Setup & Usage
 

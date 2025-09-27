@@ -1,4 +1,4 @@
-﻿------------------------- Ahmed & Bishoy ---------------------------------------
+------------------------- Ahmed & Bishoy ---------------------------------------
 -- Create Roles 
 IF NOT EXISTS (SELECT 1 FROM sys.database_principals WHERE name = 'role_Admin')
     CREATE ROLE role_Admin;

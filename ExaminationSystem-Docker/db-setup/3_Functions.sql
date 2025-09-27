@@ -114,7 +114,7 @@ RETURN
     FROM Exams E
     JOIN Courses C ON E.CourseID = C.CourseID
     JOIN Instructors I ON E.InstructorID = I.InstructorID
-    WHERE E.ExamID = @ExamID
+    WHERE E.ExamIDï¿½=ï¿½@ExamID
 );
 
 --SELECT * FROM dbo.FN_GetExamDetails(3)

@@ -1,2 +1,38 @@
-* text=auto eol=lf
-*.sh eol=lf
+# # # Secrets # # #
+# This is the most important part. Never commit secrets to Git.
+.env
+
+# # # Visual Studio / Rider / IDE specific # # #
+# User-specific files
+*.suo
+*.user
+
+# Build results
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio cache files
+.vs/
+.idea/
+
+# Rider specific
+.idea.solution/
+*.sln.DotSettings.user
+
+# # # Backup Files # # #
+# Ignore database backup files as they can be large and are generated artifacts.
+*.bak
+
+# # # OS generated files # # #
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+.Trash-*
